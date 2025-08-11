@@ -1,32 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | Household Services</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Booking - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/services.html">Services</a></li>
-        <li><a href="pages/booking.html">Booking</a></li>
-        <li><a href="pages/login.html">Login</a></li>
-        <li><a href="pages/register.html">Register</a></li>
-        <li><a href="pages/dashboard.html">Dashboard</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Welcome to Household Services</h1>
-    <p>Book trusted professionals for your home needs.</p>
-  </main>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyServices</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/booking.html">Booking</a></li>
+                <li><a href="pages/login.html">Login</a></li>
+                <li><a href="pages/register.html">Register</a></li>
+                <li><a href="pages/dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 Household Services. All rights reserved.</p>
-  </footer>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to MyServices</h1>
+        <p>Fast, reliable and affordable home services at your fingertips.</p>
+        <a href="pages/services.html" class="btn">Explore Services</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Popular Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <img src="images/acrepair.webp" alt="AC Repair">
+                <h3>AC Repair</h3>
+                <p>Quick and efficient air conditioner repairs at your home.</p>
+                <a href="pages/booking.html" class="btn">Book Now</a>
+            </div>
+            <div class="service-card">
+                <img src="images/cleaning.jpg" alt="Cleaning">
+                <h3>Cleaning</h3>
+                <p>Professional home and office cleaning services.</p>
+                <a href="pages/booking.html" class="btn">Book Now</a>
+            </div>
+            <div class="service-card">
+                <img src="images/painter.jpg" alt="Painting">
+                <h3>Painting</h3>
+                <p>Expert painting services to brighten your home.</p>
+                <a href="pages/booking.html" class="btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 MyServices. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

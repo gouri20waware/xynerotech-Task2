@@ -1,31 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-  <title>Services</title>
-  <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MyServices</title>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
+<style>/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #2193b0;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #2193b0;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #176682;
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #2193b0;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+</style>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Login Page</h1>
-    <p>List of household services will go here.</p>
-  </main>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="dashboard.html" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
 
-  <footer>
-    <p>&copy; 2025 Household Services. All rights reserved.</p>
-  </footer>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+
+            <p class="register-text">
+                Don't have an account? <a href="register.html">Register</a>
+            </p>
+        </form>
+    </div>
+
 </body>
 </html>

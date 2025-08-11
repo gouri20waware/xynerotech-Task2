@@ -1,31 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-  <title>Services</title>
-  <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - MyServices</title>
+    <link rel="stylesheet" href="/css/service.css">
 </head>
+<style>/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #3498db;
+    color: white;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #eaf6ff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Services */
+.services {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 2rem;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #3498db;
+}
+
+.service-card p {
+    padding: 0.8rem 1rem;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.btn-green {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0.6rem 1.4rem;
+    background: #2ecc71;
+    color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-green:hover {
+    background: #27ae60;
+}
+
+/* Footer */
+footer {
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+</style>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="booking.html">Booking</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Services Page</h1>
-    <p>List of household services will go here.</p>
-  </main>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyServices</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <footer>
-    <p>&copy; 2025 Household Services. All rights reserved.</p>
-  </footer>
+    <!-- Hero -->
+    <section class="hero">
+        <h1>Our Services</h1>
+        <p>Choose from a variety of professional services tailored to your needs.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Popular Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <img src="../images/acrepair.webp" alt="AC Repair">
+                <h3>AC Repair</h3>
+                <p>Quick and efficient air conditioner repairs at your home.</p>
+                <a href="booking.html" class="btn-green">Book Now</a>
+            </div>
+
+            <div class="service-card">
+                <img src="../images/cleaning.jpg" alt="Cleaning">
+                <h3>Cleaning</h3>
+                <p>Professional home and office cleaning services.</p>
+                <a href="booking.html" class="btn-green">Book Now</a>
+            </div>
+
+            <div class="service-card">
+                <img src="../images/painter.jpg" alt="Painting">
+                <h3>Painting</h3>
+                <p>Expert painting services to brighten your home.</p>
+                <a href="booking.html" class="btn-green">Book Now</a>
+            </div>
+
+            
+        </div>&nbsp;&nbsp;
+
+    <div class="service-container">
+    <div class="service-card">
+        <img src="../images/electricity.jpg" alt="Electrician">
+        <h3>Electrician</h3>
+        <p>Reliable electrical repair, wiring, and installation services for your home or office.</p>
+        <a href="booking.html" class="btn-green">Book Now</a>
+    </div>
+
+    <div class="service-card">
+        <img src="../images/plumbing.jpg" alt="Plumber">
+        <h3>Plumber</h3>
+        <p>Expert plumbing solutions for leaks, pipe repairs, and bathroom installations.</p>
+        <a href="booking.html" class="btn-green">Book Now</a>
+    </div>
+
+    <div class="service-card">
+        <img src="../images/gardening.jpg" alt="Gardener">
+        <h3>Gardener</h3>
+        <p>Professional gardening and landscaping to keep your outdoor spaces fresh and green.</p>
+        <a href="booking.html" class="btn-green">Book Now</a>
+    </div>
+</div>
+
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 MyServices. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
