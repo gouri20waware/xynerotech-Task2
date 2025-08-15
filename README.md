@@ -10,8 +10,5 @@ Book appointments
 
 Register and log in securely to manage bookings
 
-<<<<<<< HEAD
 The frontend is developed using modern web technologies to ensure fast performance, clean design, and seamless integration with backend APIs.
-=======
-The frontend is developed using modern web technologies to ensure fast performance, clean design, and seamless integration with backend APIs.
->>>>>>> 5c438d4a12990d6b52b8499f5292fc3469c00345
+
