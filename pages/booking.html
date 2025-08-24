@@ -139,6 +139,21 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
+ /* Responsive */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
 </style>
 <body>
 
@@ -165,7 +180,7 @@ footer {
 
     <!-- Booking Form -->
     <section class="booking-section">
-        <form class="booking-form">
+        <form class="booking-form" action="" method="post">
             <label for="service">Select Service</label>
             <select id="service" name="service" required>
                 <option value="">-- Choose a Service --</option>
