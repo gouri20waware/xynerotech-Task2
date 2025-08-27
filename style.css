@@ -29,10 +29,22 @@ header {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.8rem;
     font-weight: bold;
     color: #3498db;
 }
+
+.logo-img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
 
 .nav-links {
     list-style: none;

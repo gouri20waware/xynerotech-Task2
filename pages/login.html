@@ -37,10 +37,21 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #3498db;
-        }
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.logo-img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+}
+
+
 
         .nav-links {
             list-style: none;
@@ -142,36 +153,33 @@
         }
 
         /* Responsive */
-@media (max-width: 768px) {
-    .service-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .navbar {
-        flex-direction: column;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-}
-    </style>
-    <script src="js/login.js"></script>
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
 
+            .nav-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  
-
 
     <!-- Header -->
     <header>
         <nav class="navbar">
-            <div class="logo">MyServices</div>
+            <div class="logo">
+    <img src="../images/logo.jpg" alt="MyServices Logo" class="logo-img">
+    <span>MyServices</span>
+</div>
+
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="booking.html" >Booking</a></li>
-                <li><a href="login.html" >Login</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
                 <li><a href="register.html">Register</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
             </ul>
@@ -181,7 +189,7 @@
     <!-- Login Form -->
     <div class="login-container">
         <h2>Login</h2>
-        <form action="dashboard.html" method="POST">
+        <form method="POST" onsubmit="return validateLogin()">
             <div class="input-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -204,6 +212,26 @@
     <footer>
         <p>© 2025 MyServices. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript Alert -->
+    <script>
+        function validateLogin() {
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+           
+            const validEmail = "user@example.com";
+            const validPassword = "123456";
+
+            if (email === validEmail && password === validPassword) {
+                alert("Login successful!");
+                return true; 
+            } else {
+                alert("Invalid credentials. Please try again.");
+                return false; 
+            }
+        }
+    </script>
 
 </body>
 </html>

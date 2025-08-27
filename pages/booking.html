@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking - MyServices</title>
-   
 </head>
-<style>/* Base Reset */
+<style>
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
@@ -35,10 +35,21 @@ header {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.8rem;
     font-weight: bold;
     color: #3498db;
 }
+
+.logo-img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+}
+
+
 
 .nav-links {
     list-style: none;
@@ -140,7 +151,7 @@ footer {
     margin-top: 2rem;
 }
 
- /* Responsive */
+/* Responsive */
 @media (max-width: 768px) {
     .service-container {
         flex-direction: column;
@@ -160,11 +171,15 @@ footer {
     <!-- Header -->
     <header>
         <nav class="navbar">
-            <div class="logo">MyServices</div>
+            <div class="logo">
+    <img src="../images/logo.jpg" alt="MyServices Logo" class="logo-img">
+    <span>MyServices</span>
+</div>
+
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="booking.html" >Booking</a></li>
+                <li><a href="booking.html" class="active">Booking</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="register.html">Register</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
@@ -180,7 +195,7 @@ footer {
 
     <!-- Booking Form -->
     <section class="booking-section">
-        <form class="booking-form" action="" method="post">
+        <form class="booking-form" method="post" onsubmit="return showAlert()">
             <label for="service">Select Service</label>
             <select id="service" name="service" required>
                 <option value="">-- Choose a Service --</option>
@@ -214,6 +229,27 @@ footer {
     <footer>
         <p>© 2025 MyServices. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript Alert -->
+    <script>
+    function showAlert() {
+        const service = document.getElementById("service").value.trim();
+        const date = document.getElementById("date").value.trim();
+        const time = document.getElementById("time").value.trim();
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const address = document.getElementById("address").value.trim();
+
+        if (service && date && time && name && phone && address) {
+            alert("Booking is successful!");
+            return true;
+        } else {
+            alert("Please fill in all fields correctly.");
+            return false; 
+        }
+    }
+</script>
+
 
 </body>
 </html>
